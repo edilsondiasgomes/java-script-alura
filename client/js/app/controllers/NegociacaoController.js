@@ -20,7 +20,9 @@ class NegociacaoController {
                 return item;
             })
         );
-        console.log(data)
+
+        let negociacao = new Negociacao(data, this._inputQuantidade.value, this._inputValor.value)
+        console.log(negociacao);
 
 
     }
