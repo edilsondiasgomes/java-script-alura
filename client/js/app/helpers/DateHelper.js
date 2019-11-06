@@ -5,6 +5,9 @@ class DateHelper {
     }
 
     static textoParaData(texto) {
+        if (!/\d{4}-\d{2}-\d{2}/.test(texto))
+            throw new Error('formato de data inválido');
+
         return new Date(...texto
             .split('-')
             .map(function (item, indice) {
